@@ -1,0 +1,18 @@
+[user]
+	name = chosty
+	email = tyosuthi@gmail.com
+[push]
+	default = matching
+[alias]
+	co = checkout
+	nffmerge = merge --no-ff
+      graph = log --oneline --graph --decorate
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
