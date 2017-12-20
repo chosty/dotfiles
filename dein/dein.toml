@@ -9,3 +9,28 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  noremap <silent><C-e> :NERDTreeTabsToggle<CR>
+  autocmd bufenter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
+
+  let g:NERDTreeShowHidden = 1
+  if winwidth(0) < 128
+    let g:NERDTreeWinSize = 25
+  endif
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+

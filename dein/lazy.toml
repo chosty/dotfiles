@@ -1,0 +1,72 @@
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = '''
+  nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+  nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+  nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+  nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+  nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
+
+###########
+# 補完系
+###########
+
+# コードの自動補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+on_ft = ['ruby']
+
+# vim8でdeopleteを使うのに必要
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+on_ft = ['ruby']
+
+############
+# Ruby
+############
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+
+# Rubyの自動補完
+[[plugins]]
+repo = 'osyo-manga/vim-monster'
+on_i = 1
+hook_add = '''
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+  \ "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+  \}
+'''
+
+# Rubyのend補完
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_i = 1
+on_ft = ['ruby']
+
+# Rubyのメソッドの定義元にジャンプ
+[[plugins]]
+repo = 'szw/vim-tags'
