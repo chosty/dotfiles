@@ -1,0 +1,10 @@
+# ignore files
+.vim
+dein/merged/
+dein/repos/
+dein/rollbacks/
+dein/temp/
+dein/.dein/
+dein/.cache/
+dein/state_vim.vim
+dein/cache_vim
