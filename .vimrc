@@ -149,7 +149,7 @@ if dein#load_state(s:dein_dir)
   call dein#add(s:dein_dir)
   let g:rc_dir    = expand('~/dotfiles/dein')
   let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  let s:lazy_toml = g:rc_dir . '/lazy.toml'
 
   " プラグイン管理 tomlに書く
   call dein#load_toml(s:toml,      {'lazy': 0})
