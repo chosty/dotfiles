@@ -22,9 +22,8 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Go
-export GOROOT=$HOME/go
-export GOPATH=$HOME/gopath
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # prompt
 PROMPT="%c $ "
