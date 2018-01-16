@@ -79,6 +79,13 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
+" PHP
+let g:php_baselib       = 1
+let g:php_htmlInStrings = 1
+let g:php_noShortTags   = 1
+let g:php_sql_query     = 1
+let g:sql_type_default = 'mysql'
+
 "----------------------------------------------------------
 " マッピング設定
 "----------------------------------------------------------
