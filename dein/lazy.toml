@@ -1,8 +1,4 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
-
-[[plugins]]
 repo = 'Shougo/unite.vim'
 hook_add = '''
   nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
@@ -16,25 +12,19 @@ hook_add = '''
 repo = 'Shougo/neomru.vim'
 on_source = ['unite.vim']
 
-###########
-# 補完系
-###########
-
-# コードの自動補完
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 on_i = 1
-hook_add = 'let g:deoplete#enable_at_startup = 1'
 
-# vim8でdeopleteを使うのに必要
 [[plugins]]
-repo = 'roxma/nvim-yarp'
-on_ft = ['ruby']
-
-# vim8でdeopleteを使うのに必要
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-on_ft = ['ruby']
+repo = 'Shougo/neosnippet'
+depends = ['neosnippet-snippets']
+on_i = 1
+on_ft = ['snippet']
 
 # Rubyの自動補完
 [[plugins]]
@@ -70,4 +60,9 @@ repo = 'szw/vim-tags'
 # PHP vdebug
 [[plugins]]
 repo = 'joonty/vdebug'
+on_ft = ['php']
+
+# PHP 補完
+[[plugins]]
+repo = 'padawan-php/deoplete-padawan'
 on_ft = ['php']
