@@ -17,14 +17,19 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-on_i = 1
-
-[[plugins]]
 repo = 'Shougo/neosnippet'
-depends = ['neosnippet-snippets']
-on_i = 1
+hook_source = '''
+  "Ctrl+Kにターゲットジャンプ割当
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  smap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+  if has('conceal')
+    set conceallevel=2 concealcursor=niv
+  endif
+'''
+on_i  = 1
 on_ft = ['snippet']
+depends = ['neosnippet-snippets']
 
 # Rubyの自動補完
 [[plugins]]
