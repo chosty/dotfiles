@@ -20,10 +20,15 @@ export JAVA_HOME=`/usr/libexec/java_home`
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+source ~/.cargo/env
+export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# PHP
+export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
 
 # prompt
 PROMPT="%c $ "
