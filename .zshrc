@@ -25,7 +25,7 @@ export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib
 
 # Go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # PHP
 export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
