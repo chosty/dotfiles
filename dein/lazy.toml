@@ -71,3 +71,12 @@ on_ft = ['php']
 [[plugins]]
 repo = 'padawan-php/deoplete-padawan'
 on_ft = ['php']
+
+# Go 
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+on_ft = 'go'
