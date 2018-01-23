@@ -129,7 +129,7 @@ nnoremap <Space>Q  :<C-u>q!<CR>
 
 " tab関連
 nnoremap <silent> tt  :<C-u>tabe<CR>
-nnoremap <C-p>  gT
+nnoremap <C-b>  gT
 nnoremap <C-n>  gt
 nnoremap <silent> tq :<C-u>tabclose<CR>
 
@@ -147,12 +147,6 @@ cnoremap <C-a>  <C-b>
 cnoremap <C-e>  <C-e>
 cnoremap <C-u> <C-e><C-u>
 cnoremap <C-v> <C-f>a
-
-" move cursor in insert mode
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
 
 " その他
 nnoremap ZZ <Nop>
