@@ -77,6 +77,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.go setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 " PHP
@@ -128,7 +129,7 @@ nnoremap <Space>Q  :<C-u>q!<CR>
 
 " tab関連
 nnoremap <silent> tt  :<C-u>tabe<CR>
-nnoremap <C-p>  gT
+nnoremap <C-b>  gT
 nnoremap <C-n>  gt
 nnoremap <silent> tq :<C-u>tabclose<CR>
 
@@ -146,12 +147,6 @@ cnoremap <C-a>  <C-b>
 cnoremap <C-e>  <C-e>
 cnoremap <C-u> <C-e><C-u>
 cnoremap <C-v> <C-f>a
-
-" move cursor in insert mode
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
 
 " その他
 nnoremap ZZ <Nop>

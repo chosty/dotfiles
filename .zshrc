@@ -11,9 +11,9 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin":$PATH
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # pyenv
-export PYENV_ROOT="${HOME}/.pyenv"
-export PATH=${PYENV_ROOT}/bin:$PATH
-eval "$(pyenv init -)"
+# export PYENV_ROOT="${HOME}/.pyenv"
+# export PATH=${PYENV_ROOT}/bin:$PATH
+# eval "$(pyenv init -)"
 
 # java
 export JAVA_HOME=`/usr/libexec/java_home`
@@ -28,10 +28,21 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # PHP
-export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+# export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+
+# カラー
+autoload -Uz colors
+colors
 
 # prompt
-PROMPT="%c $ "
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:*' formats '[%F{159}%b%f]'
+zstyle ':vcs_info:*' actionformats '[%F{159}%b%f(%F{001}%a%f)]'
+precmd() { vcs_info }
+PROMPT='%{%F{228}%}%~%{${reset_color}%}${vcs_info_msg_0_}
+%(?.%B%F{084}.%B%F{219})%(?!(๑˃̵ᴗ˂̵)ﻭ < !(｡>﹏<｡%) < )%f%b'
+RPROMPT=''
 
 # 補完
 autoload -U compinit
