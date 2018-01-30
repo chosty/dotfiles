@@ -4,6 +4,8 @@
 
 " エンコーディング
 set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 scriptencoding utf-8
 
 " 行番号を表示
