@@ -4,7 +4,7 @@
 
 " エンコーディング
 set encoding=utf-8
-set fileencodings=uft-8,iso-2022-jp,euc-jp,sjis
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
 scriptencoding utf-8
 
