@@ -69,6 +69,9 @@ set belloff=all
 set showmatch
 source $VIMRUNTIME/macros/matchit.vim
 
+" 補完系の設定
+set completeopt=menuone
+
 "----------------------------------------------------------
 " 言語別設定
 "----------------------------------------------------------
