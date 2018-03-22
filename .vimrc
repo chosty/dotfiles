@@ -25,6 +25,9 @@ set modeline
 
 " syntax
 syntax enable
+set background=dark
+set termguicolors
+colorscheme material-theme
 
 " 常にステータスラインを表示
 set laststatus=2
@@ -61,9 +64,6 @@ set autoread
 
 " 音を出さないようにする
 set belloff=all
-
-" カラースキーマ
-colorscheme desert
 
 " 括弧の対応関係, %による移動
 set showmatch
