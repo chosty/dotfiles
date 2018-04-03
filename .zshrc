@@ -94,3 +94,16 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+function peco-src () {
+    local selected_dir=$(ghq list | peco --query "$LBUFFER")
+          if [ -n "$selected_dir" ]; then
+        selected_dir="$GOPATH/src/$selected_dir"
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^f' peco-src
+
