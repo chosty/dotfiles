@@ -24,11 +24,12 @@ source ~/.cargo/env
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 # Go
-export GOPATH=$HOME/go
+export GOPATH=$HOME/dev
 export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
 
 # PHP
 # export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # カラー
 autoload -Uz colors
