@@ -117,8 +117,8 @@ vnoremap gk  k
 vnoremap gj  j
 
 " for accelerated-jk
-nmap j <Plug>(accelerated_jk_gj)
-nmap k <Plug>(accelerated_jk_gk)
+" nmap j <Plug>(accelerated_jk_gj)
+" nmap k <Plug>(accelerated_jk_gk)
 
 " for vim-anzu
 nmap n nzz<Plug>(anzu-update-search-status)
@@ -137,6 +137,14 @@ nnoremap <silent> tt  :<C-u>tabe<CR>
 nnoremap <C-b>  gT
 nnoremap <C-n>  gt
 nnoremap <silent> tq :<C-u>tabclose<CR>
+
+" window関連
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sw <C-w>w
 
 " 空行挿入
 nnoremap <Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
