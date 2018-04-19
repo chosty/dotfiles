@@ -1,5 +1,8 @@
 # PATH関連
 
+# brew path
+export PATH="/usr/local/sbin:$PATH"
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
