@@ -8,4 +8,14 @@
     "editor.fontFamily": "Ricty-Regular",
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 14,
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "[go]": {
+        "editor.tabSize": 4
+    },
+    "[cpp]": {
+        "editor.tabSize": 2
+    },
+    "explorer.confirmDragAndDrop": false,
 }
