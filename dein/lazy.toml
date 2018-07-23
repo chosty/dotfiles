@@ -109,3 +109,7 @@ hook_source = '''
   " racerバイナリ指定
   let g:racer_cmd = "~/.cargo/bin/racer"
 '''
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = 'Dockerfile'
