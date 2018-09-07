@@ -14,9 +14,8 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin":$PATH
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # pyenv
-# export PYENV_ROOT="${HOME}/.pyenv"
-# export PATH=${PYENV_ROOT}/bin:$PATH
-# eval "$(pyenv init -)"
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # java
 export JAVA_HOME=`/usr/libexec/java_home`
