@@ -1,37 +1,23 @@
 # PATH関連
 
+# GPG
+export GPG_TTY=$(tty)
+
 # brew path
 export PATH="/usr/local/sbin:$PATH"
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# sublime
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin":$PATH
-
 # zsh-comp
-fpath=(/usr/local/share/zsh-completions $fpath)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit && compinit
+fi
 
-# pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# java
-export JAVA_HOME=`/usr/libexec/java_home`
-
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-source ~/.cargo/env
-export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Go
-export GOPATH=$HOME/dev
-export PATH=$PATH:$GOPATH/bin:/usr/local/opt/go/libexec/bin
-
-# PHP
-# export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # カラー
 autoload -Uz colors
@@ -100,7 +86,7 @@ bindkey '^r' peco-select-history
 function peco-src () {
     local selected_dir=$(ghq list | peco --query "$LBUFFER")
           if [ -n "$selected_dir" ]; then
-        selected_dir="$GOPATH/src/$selected_dir"
+        selected_dir="~/dev/src/$selected_dir"
         BUFFER="cd ${selected_dir}"
         zle accept-line
     fi
@@ -108,4 +94,3 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^f' peco-src
-

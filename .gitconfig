@@ -1,6 +1,7 @@
 [user]
 	name = chosty
 	email = tyosuthi@gmail.com
+	signingkey = 0C90CAF1B317DC28
 [push]
 	default = matching
 [alias]
@@ -18,3 +19,8 @@
 	required = true
 [ghq]
 	root = ~/dev/src
+
+[includeIf "gitdir:~/dev/src/github.com/mitsui-x/"]
+  	path = ~/.gitconfig-mitsui-x
+[commit]
+	gpgsign = true
